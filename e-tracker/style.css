@@ -1,32 +1,26 @@
-html {
+html{
   scroll-behavior: smooth;
 }
-
-select {
-  width: 180px;
+select{
+    width: 180px;
 }
-
-button {
-  width: 100px;
-  border: 1px solid black;
-  padding: 0px;
-  margin: 5px;
-  border-radius: 3px;
-  background-color: white;
+button{
+    width: 100px;
+    border: 1px solid black;
+    padding: 0px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: white;
 }
-
-button:hover {
-  background-color: rgb(238, 238, 238);
+button:hover{
+    background-color: rgb(238, 238, 238);
 }
-
-.btn-styled button {
-  width: 90px;
-  height: 25px;
-  font-size: 15px;
+.btn-styled button{
+    width: 90px;
+    height: 25px;
+    font-size: 15px;
 }
-
-body,
-html {
+body, html {
   height: 100%;
   margin: 0;
   font-family: 'Mukta', sans-serif;
@@ -47,8 +41,7 @@ html {
   padding-top: 60px;
 }
 
-.sidebar li,
-.sidebar a {
+.sidebar li, .sidebar a {
   padding: 8px 8px 0px 0px;
   text-decoration: none;
   font-size: 15px;
@@ -82,20 +75,17 @@ html {
   background-color: #000000;
 }
 
-.sidebar ul ul {
-  position: static;
+.sidebar ul ul{
+  position: static; 
   display: none;
 }
-
-.sidebar ul .project-tracker-show.show {
+.sidebar ul .project-tracker-show.show{
   display: block;
 }
-
-.sidebar ul .expense-claim-show.show1 {
+.sidebar ul .expense-claim-show.show1{
   display: block;
 }
-
-.sidebar ul .project-expense-claim-show.show2 {
+.sidebar ul .project-expense-claim-show.show2{
   display: block;
 }
 
@@ -114,18 +104,17 @@ html {
   }
 }
 
-select {
+select{
   height: 22px;
   width: 200px;
 }
 
-.tablink {
+.tablink{
   width: 100%;
   height: 50px;
   background-color: rgb(29, 29, 29);
   color: white;
 }
-
 .tablink:hover {
   background-color: rgb(84, 84, 84);
 }
@@ -135,7 +124,6 @@ select {
   top: 0;
   width: 100%
 }
-
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
   color: white;
@@ -145,28 +133,47 @@ select {
 }
 
 /* Delta Summary */
-.text-style {
+.text-style{
   border: 1px solid black;
   background-color: azure;
   text-align: center;
   width: 60px;
   margin: auto;
 }
-
-.red {
+.red{
   background-color: rgb(255, 98, 98);
 }
-
-.green {
+.green{
   background-color: #6aff80;
 }
-
-.yellow {
+.yellow{
   background-color: #ffff23;
 }
 
+/* Period Summary */
+#period_summary table tbody tr td:nth-child(3),
+#period_summary table tbody tr td:nth-child(5),
+#period_summary table tbody tr td:nth-child(7) {
+  text-align: end;
+}
+
 /* Milestone Summary */
-.ms_table .col-2,
-.ms_table .col-1 {
+.ms_table .col-2, .ms_table .col-1{
   border: .5px solid rgb(198, 198, 198);
 }
+
+#milestone_summary .row div:nth-child(3),
+#milestone_summary .row div:nth-child(5),
+#milestone_summary .row div:nth-child(7){
+  text-align: end;
+}
+#milestone_summary .row div:nth-child(2),
+#milestone_summary .row div:nth-child(4),
+#milestone_summary .row div:nth-child(6) {
+  text-align: center;
+}
+
+table thead tr, table td{
+  text-align: center;
+}
+
