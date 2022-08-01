@@ -29,7 +29,7 @@
 
 <body>
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+        <a href="javascript:void(0)" class="closeNav" onclick="closeNav()">x</a>
         <ul>
             <li>
                 <a href="index.html#">Tech360 Dashboard</a>
@@ -39,12 +39,12 @@
                     Project Tracker <i class="fa-solid fa-angle-down"></i>
                 </a>
                 <ul id="myDropdown" class="project-tracker-show dropdown-content">
-                    <li><a href="project_dashboard.html">Project Dashboard</a></li>
-                    <li><a href="search_activity.html">Search Activity</a></li>
-                    <li><a href="update_activity.html">Update Activity</a></li>
-                    <li><a href="create_activity.html">Create Activity</a></li>
-                    <li><a href="overwrite_column.html">Overwrite Column</a></li>
-                    <li><a href="delete_activity.html">Delete Activity</a></li>
+                    <li><a href="project_dashboard.html#">Project Dashboard</a></li>
+                    <li><a href="search_activity.html#">Search Activity</a></li>
+                    <li><a href="update_activity.html#">Update Activity</a></li>
+                    <li><a href="create_activity.html#">Create Activity</a></li>
+                    <li><a href="overwrite_column.html#">Overwrite Column</a></li>
+                    <li><a href="delete_activity.html#">Delete Activity</a></li>
                 </ul>
             </li>
             <li>
@@ -55,8 +55,8 @@
                     <li><a href="#" class="project-expense-claim-btn">Project Expense Claim <i
                                 class="fa-solid fa-angle-down"></i></a>
                         <ul class="project-expense-claim-show">
-                            <li><a href="ta_da_expense.html">TA DA Expense Claim</a></li>
-                            <li><a href="non_ta_da_expense.html">Non TA DA Expense Claim</a></li>
+                            <li><a href="ta_da_expense.html#">TA DA Expense Claim</a></li>
+                            <li><a href="non_ta_da_expense.html#">Non TA DA Expense Claim</a></li>
                         </ul>
                     </li>
                     <li><a href="general_expense.html">General Expense Claim</a></li>
@@ -66,8 +66,8 @@
         </ul>
     </div>
     <div style="background-color: rgb(31, 73, 120); display: flex;">
-        <h2 style="margin-left: 70px;" class="text-white mt-2 me-3">TECH360</h2>
-        <button class="openbtn" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+        <a style="text-decoration: none;" href="index.html#"><h2 style="margin-left: 70px;" class="text-white mt-2 me-3">TECH360</h2></a>
+        <button id="togglebtn" class="closebtn" onclick="toggleClass()"><i class="fa-solid fa-bars"></i></button>
     </div>
 
     <div id="main">
@@ -77,15 +77,43 @@
     </div>
 
     <script>
-        function openNav() {
-            document.getElementById("mySidebar").style.width = "280px";
-            document.getElementById("main").style.marginLeft = "280px";
-        }
+        // Sidebar
 
-        function closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
+        var toggle = document.getElementById('togglebtn')
+
+        document.getElementById("mySidebar").style.width = "280px";
+        document.getElementById("main").style.marginLeft = "280px";
+
+        function toggleClass() {
+            if (toggle.classList == 'openbtn') {
+                document.getElementById("mySidebar").style.width = "280px";
+                document.getElementById("main").style.marginLeft = "280px";
+                toggle.classList.remove('openbtn')
+                toggle.classList.add('closebtn')
+            }
+            else{
+                document.getElementById("mySidebar").style.width = "0px";
+                document.getElementById("main").style.marginLeft = "0px";
+                toggle.classList.remove('closebtn')
+                toggle.classList.add('openbtn')
+            }
         }
+        function closeNav(){
+            document.getElementById("mySidebar").style.width = "0px";
+            document.getElementById("main").style.marginLeft = "0px";
+            toggle.classList.remove('closebtn')
+            toggle.classList.add('openbtn')
+        }
+        // function openNav() {
+        //     document.getElementById("mySidebar").style.width = "280px";
+        //     document.getElementById("main").style.marginLeft = "280px";
+        // }
+
+        // function closeNav() {
+        //     document.getElementById("mySidebar").style.width = "0";
+        //     document.getElementById("main").style.marginLeft = "0";
+        // }
+
         $('.project-tracker-btn').click(function () {
             $('.sidebar ul .project-tracker-show').toggleClass("show")
         })
@@ -96,47 +124,6 @@
             $('.sidebar ul .project-expense-claim-show').toggleClass("show2")
         })
 
-        // When the user scrolls the page, execute myFunction
-        window.onscroll = function () { myFunction() };
-
-        // Get the header
-        var buttonTab = document.getElementById("buttonTab");
-
-        // Get the offset position of the navbar
-        var sticky = buttonTab.offsetTop;
-
-        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function myFunction() {
-            if (window.pageYOffset > sticky) {
-                buttonTab.classList.add("sticky");
-            } else {
-                buttonTab.classList.remove("sticky");
-            }
-        }
-
-        function openPage(pageName, elmnt, color) {
-            // Hide all elements with class="tabcontent" by default */
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // Remove the background color of all tablinks/buttons
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].style.backgroundColor = "";
-            }
-
-            // Show the specific tab content
-            document.getElementById(pageName).style.display = "block";
-
-            // Add the specific color to the button used to open the tab content
-            elmnt.style.backgroundColor = color;
-        }
-
-        // Get the element with id="defaultOpen" and click on it
-        document.getElementById("defaultOpen").click();
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
