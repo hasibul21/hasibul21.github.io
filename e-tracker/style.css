@@ -1,6 +1,12 @@
 html{
   scroll-behavior: smooth;
 }
+.section-margin-padding{
+  margin-top: 60px;
+  margin-bottom: 60px !important;
+  padding-top: 1px;
+  padding-bottom: 30px;
+}
 select{
     width: 180px;
 }
@@ -11,14 +17,21 @@ button{
     margin: 5px;
     border-radius: 3px;
     background-color: white;
+    transition: .4s ease;
 }
 button:hover{
-    background-color: rgb(238, 238, 238);
+    background-color: #1F4978;
+    color: white;
 }
 .btn-styled button{
     width: 90px;
     height: 25px;
     font-size: 15px;
+}
+.btn-submit button{
+    width: 140px;
+    height: 35px;
+    font-size: 18px;
 }
 body, html {
   height: 100%;
@@ -177,3 +190,16 @@ table thead tr, table td{
   text-align: center;
 }
 
+/* TA DA Expense */
+
+.ta-da-expense input, .ta-da-expense select{
+  width: 170px;
+  height: 26px;
+}
+
+/* TA DA Expense */
+
+.non-ta-da-expense input, .non-ta-da-expense select{
+  width: 170px;
+  height: 26px;
+}
