@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h3 {
+    text-align: justify;
+    font-family: 'PT Mono', monospace;
+}
+
+p {
+    text-align: justify;
+}
+
+.headline {
+    color: #0f248d;
+}
+
+.bg-hero {
+    height: 90vh;
+    background-image: url(images/hero-bg.webp), linear-gradient(rgba(141, 255, 112, 0.5), rgba(0, 0, 0, 0.5));
+    background-blend-mode: overlay;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.section-mp {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.mission-vision {
+    height: 70vh;
+    display: grid;
+    grid-template-columns: .4fr .4fr .4fr .4fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "mission mission vision respect"
+        "integrity innovations commitment commitment";
+}
+
+.mission {
+    background: #0F248D;
+    grid-area: mission;
+}
+
+.vision {
+    background: #65B822;
+    grid-area: vision;
+}
+
+.commitment {
+    background-color: #0F248D;
+    grid-area: commitment;
+}
+
+.integrity {
+    background-color: #65B822;
+    grid-area: integrity;
+}
+
+.respect {
+    background-color: red;
+    grid-area: respect;
+}
+
+.innovations {
+    background-color: red;
+    grid-area: innovations;
+}
+
+.features img{
+    transition: .6s;
+}
+.nav-tabs .nav-item{
+    border: #0F248D 2px solid;
+    padding: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 991px) {
+    .mission-vision {
+        grid-template-columns: 1fr;
+        grid-template-rows: .6fr .4fr .4fr .4fr .4fr .6fr;
+        grid-template-areas:
+            "mission"
+            "vision"
+            "respect"
+            "integrity"
+            "innovations"
+            "commitment";
+    }
+}
