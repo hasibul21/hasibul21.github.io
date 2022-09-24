@@ -39,7 +39,16 @@ p {
     padding-bottom: 60px;
 }
 
-.mission-vision {
+.navbar-nav a{
+    transition: .3s ease;
+    margin-right: 20px !important;
+}
+.navbar-nav a:hover{
+    background-color: #65B822;
+    color: white !important;
+}
+
+/* .mission-vision {
     height: 70vh;
     display: grid;
     grid-template-columns: .4fr .4fr .4fr .4fr;
@@ -77,15 +86,101 @@ p {
 .innovations {
     background-color: red;
     grid-area: innovations;
-}
+} */
 
-.features img{
+.features img {
     transition: .6s;
 }
-.nav-tabs .nav-item{
-    border: #0F248D 2px solid;
-    padding: 10px;
-    text-align: center;
+
+.features .nav-tabs {
+    border: 0;
+}
+
+.features .nav-link {
+    border: 0;
+    padding: 25px 20px;
+    color: #65B822;
+    box-shadow: 5px 5px 25px rgba(#65B822, 0.15);
+    border: 1px solid #65B822;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0s;
+    cursor: pointer;
+    height: 100%;
+}
+
+.features .nav-link i {
+    font-size: 32px;
+    line-height: 0;
+}
+
+.features .nav-link h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 0 0;
+    color: #65B822;
+}
+
+.features .nav-link:hover {
+    color: #0F248D;
+    border: 1px solid #65B822;
+}
+
+.features .nav-link.active {
+    transition: 0.3s;
+    background-color: #65B822 !important;
+    border-color: #0F248D;
+}
+
+.features .nav-link.active h4 {
+    color: white;
+}
+
+.features .nav-link.active i {
+    color: white !important;
+}
+
+.features .tab-content {
+    margin-top: 30px;
+}
+
+.features .tab-pane.active {
+    -webkit-animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.features .tab-pane h3 {
+    font-weight: 600;
+    font-size: 36px;
+    color: #65B822;
+}
+
+.features .tab-pane ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features .tab-pane ul li {
+    padding-bottom: 10px;
+}
+
+.features .tab-pane ul i {
+    font-size: 24px;
+    margin-right: 4px;
+    color: #0F248D;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 @media only screen and (max-width: 991px) {
@@ -99,5 +194,83 @@ p {
             "integrity"
             "innovations"
             "commitment";
+        margin-bottom: 600px;
     }
+}
+
+/* Counter */
+:root {
+    --main-color: #FE6A22;
+}
+.counter {
+    color: #fff;
+    text-align: center;
+    width: 210px;
+    padding: 35px 12px 30px;
+    margin: 0 auto;
+    border: 2px solid #999;
+    border-top-style: dotted;
+    border-left-style: dotted;
+    position: relative;
+    z-index: 1;
+}
+
+.counter:before {
+    content: "";
+    background: var(--main-color);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4) inset;
+    transform: skewY(-2deg);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    z-index: -1;
+}
+
+.counter .counter-icon {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0 0 10px;
+}
+
+.counter h3 {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+}
+
+.counter .counter-value {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.counter.green {
+    --main-color: #03A17C;
+}
+
+.counter.pink {
+    --main-color: #FF224B;
+}
+
+.counter.blue {
+    --main-color: #004DEE;
+}
+
+@media screen and (max-width:990px) {
+    .counter {
+        margin-bottom: 40px;
+    }
+}
+
+footer a{
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .3s ease;
+}
+footer a:hover{
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
 }
