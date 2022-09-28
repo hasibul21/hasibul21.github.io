@@ -1,10 +1,18 @@
+html{
+    scroll-padding-top: 70px;
+}
 body {
     margin: 0;
-    /* padding: 0; */
-    padding-top: 70px;
+    padding: 0;
+    /* padding-top: 70px; */
     scroll-behavior: smooth;
     /* font-family: 'Montserrat', sans-serif; */
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'GoogleSans';
+}
+
+@font-face {
+    font-family: 'GoogleSans';
+    src: url(fonts/GoogleSans-Regular.ttf);
 }
 
 h1 {
@@ -20,12 +28,28 @@ p {
     text-align: justify;
 }
 
+.webmail-btn{
+    background-color: #0f248d;
+    color: white !important;
+}
+.webmail-btn:hover{
+    color: #65B822;
+}
+
+.e-tracker-btn{
+    background-color: #007BFF;
+    color: white !important;
+}
+.e-tracker-btn:hover{
+    color: #65B822;
+}
+
 .headline {
     color: #0f248d;
 }
 
 .bg-hero {
-    height: 95vh;
+    height: 100vh;
     background-image: url(images/hero-bg.webp), linear-gradient(rgba(141, 255, 112, 0.5), rgba(0, 0, 0, 0.5));
     background-blend-mode: overlay;
     background-position: center;
